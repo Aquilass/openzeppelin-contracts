@@ -134,7 +134,7 @@ abstract contract ERC721 is Context, ERC165, IERC721, IERC721Metadata, IERC721Er
     /**
      * @dev See {IERC721-transferFrom}.
      */
-    function transferFrom(address from, address to, uint256 tokenId) public virtual {
+    function transferFrom(address from, address to, uint256 tokenId) public virtual payable{
         if (to == address(0)) {
             revert ERC721InvalidReceiver(address(0));
         }
